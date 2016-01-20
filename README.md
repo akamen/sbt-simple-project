@@ -26,3 +26,9 @@ SBT Simple Project
   ```
 
 4. Set your git's remote.
+
+# Scala Style
+
+```
+sbt scalastyle
+```
