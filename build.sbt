@@ -1,4 +1,5 @@
 import Dependencies._
+import Settings.Formatting
 
 name := "sbt-simple-project"
 
