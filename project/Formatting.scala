@@ -2,6 +2,8 @@ import com.typesafe.sbt.SbtScalariform
 import com.typesafe.sbt.SbtScalariform.ScalariformKeys
 import sbt._
 
+import scalariform.formatter.preferences.FormattingPreferences
+
 object Formatting {
   lazy val formatSettings = SbtScalariform.scalariformSettings ++ Seq(
     ScalariformKeys.preferences in Compile := formattingPreferences,
@@ -13,7 +15,7 @@ object Formatting {
     ScalariformKeys.preferences in Test := docFormattingPreferences
   )
 
-  def formattingPreferences = {
+  def formattingPreferences: FormattingPreferences = {
     import scalariform.formatter.preferences._
     FormattingPreferences()
       .setPreference(RewriteArrowSymbols, true)
@@ -21,7 +23,7 @@ object Formatting {
       .setPreference(AlignSingleLineCaseStatements, true)
   }
 
-  def docFormattingPreferences = {
+  def docFormattingPreferences: FormattingPreferences = {
     import scalariform.formatter.preferences._
     FormattingPreferences()
       .setPreference(RewriteArrowSymbols, false)
