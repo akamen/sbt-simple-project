@@ -7,7 +7,7 @@ version := "1.0.0-SNAPSHOT"
 
 organization := "com.your.company"
 
-scalaVersion := Versions.scala
+scalaVersion := Versions.scala212
 
 libraryDependencies ++= dependencies
 
