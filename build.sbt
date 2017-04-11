@@ -1,5 +1,4 @@
 import Dependencies._
-import Settings.Formatting
 
 name := "sbt-simple-project"
 
@@ -11,4 +10,4 @@ scalaVersion := Versions.scala212
 
 libraryDependencies ++= dependencies
 
-Formatting.formatSettings
+enablePlugins(Compiling, Formatting)
