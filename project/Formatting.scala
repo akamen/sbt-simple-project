@@ -12,28 +12,28 @@ object Formatting extends AutoPlugin {
   lazy val formatSettings: Seq[Setting[_]] = Seq(
     ScalariformKeys.autoformat in Test := true,
     ScalariformKeys.autoformat in Compile := true,
-    ScalariformKeys.preferences in Compile := formattingPreferences,
-    ScalariformKeys.preferences in Test := formattingPreferences
+    ScalariformKeys.preferences in Test := formattingPreferences,
+    ScalariformKeys.preferences in Compile := formattingPreferences
   )
 
   lazy val docFormatSettings: Seq[Setting[_]] = Seq(
-    ScalariformKeys.preferences in Compile := docFormattingPreferences,
-    ScalariformKeys.preferences in Test := docFormattingPreferences
+    ScalariformKeys.autoformat in Test := true,
+    ScalariformKeys.autoformat in Compile := true,
+    ScalariformKeys.preferences in Test := docFormattingPreferences,
+    ScalariformKeys.preferences in Compile := docFormattingPreferences
   )
 
   def formattingPreferences: FormattingPreferences = {
     import scalariform.formatter.preferences._
     FormattingPreferences()
-      .setPreference(RewriteArrowSymbols, true)
       .setPreference(AlignParameters, true)
+      .setPreference(NewlineAtEndOfFile, true)
+      .setPreference(RewriteArrowSymbols, true)
+      .setPreference(AllowParamGroupsOnNewlines, true)
       .setPreference(AlignSingleLineCaseStatements, true)
+      .setPreference(DoubleIndentConstructorArguments, true)
   }
 
-  def docFormattingPreferences: FormattingPreferences = {
-    import scalariform.formatter.preferences._
-    FormattingPreferences()
-      .setPreference(RewriteArrowSymbols, false)
-      .setPreference(AlignParameters, true)
-      .setPreference(AlignSingleLineCaseStatements, true)
-  }
+  def docFormattingPreferences: FormattingPreferences = formattingPreferences
+
 }
