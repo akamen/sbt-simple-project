@@ -3,10 +3,10 @@ import sbt._
 object Dependencies {
 
   object Versions {
-    val scala211 = "2.11.11"
     val scala212 = "2.12.4"
-    val scalaTest = "3.0.5"
-    val scalaLogging = "3.7.2"
+    val scalatest = "3.0.5"
+    val scala211 = "2.11.11"
+    val scalaLogging = "3.8.0"
   }
 
   object Compile {
@@ -14,7 +14,7 @@ object Dependencies {
   }
 
   object Test {
-    val scalaTest: ModuleID = "org.scalatest" %% "scalatest" % Versions.scalaTest % "test"
+    val scalaTest: ModuleID = "org.scalatest" %% "scalatest" % Versions.scalatest % "test"
   }
 
   import Compile._
