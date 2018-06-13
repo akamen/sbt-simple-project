@@ -32,3 +32,9 @@ SBT Simple Project
 ```
 sbt scalastyle
 ```
+
+# Scalafix
+
+```
+bin/scalafix
+```

@@ -1,6 +1,12 @@
 
 object HelloWorld {
+
   def main(args: Array[String]): Unit = {
-    println("hello world")
+    val message = Option("Scala") match {
+      case Some(name) ⇒ s"Hello $name"
+      case _          ⇒ "Hello world"
+    }
+    println(message)
   }
+
 }

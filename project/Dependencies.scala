@@ -3,14 +3,14 @@ import sbt._
 object Dependencies {
 
   object Versions {
-    val scala212 = "2.12.4"
+    val config = "1.3.3"
+    val scala212 = "2.12.6"
     val scalatest = "3.0.5"
     val scala211 = "2.11.11"
-    val scalaLogging = "3.8.0"
   }
 
   object Compile {
-    val scalaLogging: ModuleID = "com.typesafe.scala-logging" %% "scala-logging" % Versions.scalaLogging
+    val config = "com.typesafe" % "config" % Versions.config
   }
 
   object Test {
@@ -19,6 +19,6 @@ object Dependencies {
 
   import Compile._
 
-  lazy val dependencies = Seq(scalaLogging, Test.scalaTest)
+  lazy val dependencies = Seq(config, Test.scalaTest)
 
 }

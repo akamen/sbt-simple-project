@@ -10,4 +10,4 @@ scalaVersion := Versions.scala212
 
 libraryDependencies ++= dependencies
 
-enablePlugins( Formatting)
+enablePlugins(PackPlugin)
