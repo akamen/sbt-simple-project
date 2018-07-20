@@ -9,16 +9,16 @@ object Dependencies {
     val scala211 = "2.11.11"
   }
 
-  object Compile {
+  object Compiles {
     val config = "com.typesafe" % "config" % Versions.config
   }
 
-  object Test {
+  object Tests {
     val scalaTest: ModuleID = "org.scalatest" %% "scalatest" % Versions.scalatest % "test"
   }
 
-  import Compile._
+  import Compiles._
 
-  lazy val dependencies = Seq(config, Test.scalaTest)
+  lazy val dependencies = Seq(config, Tests.scalaTest)
 
 }
