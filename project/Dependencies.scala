@@ -14,7 +14,7 @@ object Dependencies {
   }
 
   object Tests {
-    val scalaTest: ModuleID = "org.scalatest" %% "scalatest" % Versions.scalatest % "test"
+    val scalaTest: ModuleID = "org.scalatest" %% "scalatest" % Versions.scalatest % Test
   }
 
   import Compiles._
