@@ -1,6 +1,6 @@
 import Dependencies._
 
-name := "sbt-simple-project"
+name := "sbt-simple-project-ari"
 
 version := "1.0.0-SNAPSHOT"
 
