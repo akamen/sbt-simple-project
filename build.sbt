@@ -8,6 +8,7 @@ organization := "com.your.company"
 
 scalaVersion := Versions.scala212
 
+libraryDependencies += "com.codahale" % "jerkson_2.8.2" % "0.5.0"
 
 libraryDependencies ++= dependencies
 
